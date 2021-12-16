@@ -1,5 +1,5 @@
-﻿// namespace Demo;
-// new RecordsDemo().DoDemo();
+﻿using TopLevelFunctionsEtc.Demos;
 
+new RecordsDemo().DoDemo();
 new PatternMatchingDemo().DoDemo();
-// new IndexesAndRanges().DoDemo();
+new IndexesAndRanges().DoDemo();

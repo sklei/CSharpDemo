@@ -3,9 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var app = builder.Build();
 
-var path = "/Users/steven/DEV/TST/C#10Demo/MinimalApi/Rapport_1.pdf";
+var path = "./Rapport_1.pdf";
 
 app.MapGet("ka/{pow}", (int pow) => Math.Pow(pow, 2));
+app.MapGet("ka/ploop", () => "PLOOP!");
 
 app.MapGet("/test1", (httpContext) => {
 	var content = File.ReadAllBytes(path);

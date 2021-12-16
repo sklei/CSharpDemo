@@ -1,3 +1,5 @@
+namespace TopLevelFunctionsEtc.Models;
+
 public record Test(string a, string b);
 
 public record Person

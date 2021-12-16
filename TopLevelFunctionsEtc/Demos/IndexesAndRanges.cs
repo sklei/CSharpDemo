@@ -1,3 +1,5 @@
+namespace TopLevelFunctionsEtc.Demos;
+
 public class IndexesAndRanges : IDemo
 {
 	public void DoDemo()

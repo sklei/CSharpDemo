@@ -36,6 +36,25 @@
 				"/property:GenerateFullPaths=true",
 				"/consoleloggerparameters:NoSummary"
 			],
+			"options": {
+				"cwd": "${workspaceFolder}/TopLevelFunctionsEtc",
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "watch-minimalApi",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"watch",
+				"run",
+				"${workspaceFolder}/MinimalApi/MinimalApi.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/MinimalApi",
+			},
 			"problemMatcher": "$msCompile"
 		}
 	]

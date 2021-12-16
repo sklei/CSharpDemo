@@ -1,3 +1,7 @@
+using TopLevelFunctionsEtc.Models;
+
+namespace TopLevelFunctionsEtc.Demos;
+
 public class RecordsDemo : IDemo
 {
 	public void DoDemo()
@@ -8,7 +12,7 @@ public class RecordsDemo : IDemo
 		p = new Person() { FirstName = "First", LastName = "Last" };
 		Console.WriteLine(p);
 
-		p = p with { FirstName = "Diff" };
+		p = p with { FirstName = "Different" };
 		Console.WriteLine(p);
 
 		var cp = new IdPerson() { FirstName = "Thomas", LastName = "van Duin", ID = 123 };

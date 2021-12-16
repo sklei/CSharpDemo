@@ -1,4 +1,6 @@
-// namespace Demo;
+using TopLevelFunctionsEtc.Models;
+
+namespace TopLevelFunctionsEtc.Demos;
 
 public class PatternMatchingDemo : IDemo
 {
@@ -100,6 +102,7 @@ public class PatternMatchingDemo : IDemo
 		WriteLine($"Is B a letter #1: {IsLetter2('A')}");
 		WriteLine($"Is 6 a letter #1: {IsLetter2('6')}");
 
+		WriteLine("- Extended Property Matching ----------------------");
 		var demoTime1 = new OneFox(
 			new OneFoxee(
 				"Matthijs",
@@ -119,11 +122,11 @@ public class PatternMatchingDemo : IDemo
 			)
 		);
 
-		var whoOhWho1 = demoTime1 is { stockholmSyndromeFamiliar: { name: "Matthijs", customer: { customerName: "GDH" }}};
-		var whoOhWho2 = demoTime2 is { stockholmSyndromeFamiliar: { name: "Matthijs" }};
-		var whoOhWho3 = demoTime3 is { stockholmSyndromeFamiliar: { name: "Matthijs", customer: { customerName: "GDH" }}};
-		WriteLine($"Is Matthijs working for GHD!?: {whoOhWho1}");
-		WriteLine($"Is Matthijs working!?: {whoOhWho2}");
+		var whoOhWho1 = demoTime1 is { stockholmSyndromeFamiliar: { name: "Matthijs" }};
+		var whoOhWho2 = demoTime2 is { stockholmSyndromeFamiliar: { name: "Matthijs", customer: { customerName: "GDH" }}};
+		var whoOhWho3 = demoTime3 is { stockholmSyndromeFamiliar: { name: "Lou", customer: { customerName: "GDH" }}};
+		WriteLine($"Is Matthijs working!?: {whoOhWho1}");
+		WriteLine($"Is Matthijs working for GHD!?: {whoOhWho2}");
 		WriteLine($"Is Lou working for GHD!?: {whoOhWho3}");
 	}
 }
