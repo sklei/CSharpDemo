@@ -12,7 +12,7 @@ public class PatternMatchingDemo : IDemo
 			new Smarty("Gray"),
 			new SmartyWithCount("Green", 10) with { Color = "Toch Blauw" },
 			new SmartyWithCount("Red", 9001),
-			new SmartOverlord("PureBlack")
+			new SmartyOverlord("PureBlack")
 		};
 
 		var smartiesWithCount = new SmartyWithCount[] {
@@ -39,7 +39,7 @@ public class PatternMatchingDemo : IDemo
 
 		string GetSmartyEx2(Smarty swc) => swc switch
 		{
-			SmartOverlord so => "Don't question the Smarty Overlord!",
+			SmartyOverlord so => "Don't question the Smarty Overlord!",
 			SmartyWithCount s when s.Color == "Green" => "Green Smarties are cool!",
 			SmartyWithCount s when s.Color == "Red" && s.Count > 9000 => "Red Smarties are cool if over 9000!",
 			SmartyWithCount s when s.Count < 5 => "A",

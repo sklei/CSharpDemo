@@ -18,7 +18,7 @@ public record PublicBuilding(string Street, string City, bool IsOpen) : Building
 
 record Smarty(string Color);
 record SmartyWithCount(string Color, int Count) : Smarty(Color);
-record SmartOverlord(string Color) : Smarty(Color);
+record SmartyOverlord(string Color) : Smarty(Color);
 
 class Vehicle { }
 class Bus : Vehicle { }
