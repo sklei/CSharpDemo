@@ -199,12 +199,12 @@ public class PatternMatchingDemo : IDemo
 		WriteLine($"Is Matthijs working for GDH!?: {whoOhWho2}");
 		WriteLine($"Is Lou working for GDH!?: {whoOhWho3}");
 
-		WriteLine("- Object deconstruction and matching ----------------------");
+		WriteLine("- Object deconstruction, Tuple creation and matching ----------------------");
 
 		static decimal GetGroupTicketPriceDiscount(int groupSize, DateTime visitDate) =>
 			(groupSize, visitDate.DayOfWeek) switch
 		{
-			(<=0, _) => throw new ArgumentException( "Group size must be positive."),
+			(<= 0, _) => throw new ArgumentException( "Group size must be positive."),
 			(_, DayOfWeek.Saturday or DayOfWeek.Sunday) => 0.0m,
 			(>= 5 and < 10, DayOfWeek.Monday) => 20.0m,
 			(>= 10, DayOfWeek.Monday) => 30.0m,
